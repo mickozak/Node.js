@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mickozak/Node.js/issues"
   },
-  "homepage": "https://github.com/mickozak/Node.js#readme"
+  "homepage": "https://github.com/mickozak/Node.js#readme",
+  "dependencies": {
+    "nodemon": "^1.18.11"
+  }
 }
