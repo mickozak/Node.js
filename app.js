@@ -1,11 +1,19 @@
-//import start
-
 const http = require('http');
 
-const app = express()
+const express = require('express');
 
-//import end
+const app = express();
 
-const server = http.createServer(app)
+app.use((req, res, next) => {
+    console.log('In the middleware!');
+    next(); // Allows the request to continue to the next middleware in line
+});
 
-server.listen(3000)
+app.use((req, res, next) => {
+    console.log('In another middleware!');
+    res.send('<h1>Hello from Express!</h1>');
+});
+
+const server = http.createServer(app);
+
+server.listen(8000);
